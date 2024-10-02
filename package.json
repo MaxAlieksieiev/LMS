@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest -o",
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.9.3",
