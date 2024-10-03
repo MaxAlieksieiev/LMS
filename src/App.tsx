@@ -1,5 +1,6 @@
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthRoutingModule } from "./modules/auth/routing";
+import { AuthLayout } from "./modules/auth/layout";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "auth",
-        element: <Outlet />,
+        element: <AuthLayout />,
         children: [...AuthRoutingModule],
       },
     ],
