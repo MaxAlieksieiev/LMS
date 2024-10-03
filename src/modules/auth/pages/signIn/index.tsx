@@ -1,5 +1,10 @@
-import React from "react";
+import { Flex } from "@chakra-ui/react";
+import { SignInForm } from "./form";
 
 export const SignIn = () => {
-  return <div>SignIn</div>;
+  return (
+    <Flex>
+      <SignInForm />
+    </Flex>
+  );
 };
