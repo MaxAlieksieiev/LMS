@@ -7,8 +7,8 @@ export const AuthLayout = () => {
     <Flex
       align="center"
       justify="center"
-      maxWidth="100vw"
-      maxHeight="100vh"
+      width="100vw"
+      height="100vh"
       direction="column"
     >
       <Logo />
