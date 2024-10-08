@@ -1,6 +1,8 @@
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthRoutingModule } from "./modules/auth/routing";
 import { AuthLayout } from "./modules/auth/layout";
+import { Dashboard } from "./modules/dashboard/pages/dashboard";
+import { RouteGuard } from "./modules/core/routing/routeGuards";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,15 @@ const router = createBrowserRouter([
         path: "auth",
         element: <AuthLayout />,
         children: [...AuthRoutingModule],
+      },
+      {
+        path: "dashboard",
+        element: (
+          <RouteGuard>
+            <Dashboard />
+          </RouteGuard>
+        ),
+        index: true,
       },
     ],
   },
