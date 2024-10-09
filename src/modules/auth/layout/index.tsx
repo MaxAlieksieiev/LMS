@@ -12,7 +12,7 @@ export const AuthLayout = () => {
       direction="column"
     >
       <Logo />
-      <Text fontSize="34px">Log in</Text>
+      <Text textStyle="h4">Log in</Text>
       <Text>Welcome to LMS</Text>
       <Outlet />
     </Flex>

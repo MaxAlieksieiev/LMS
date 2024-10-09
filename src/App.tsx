@@ -34,6 +34,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  console.log("light", lightTheme);
   return (
     <ChakraProvider theme={lightTheme}>
       <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
