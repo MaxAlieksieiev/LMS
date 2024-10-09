@@ -63,6 +63,87 @@ const COMMON_PALETTE = {
   },
 };
 
+const textStyles = {
+  h1: {
+    fontSize: ["6rem", "96px"],
+    lineHeight: 1.167,
+    fontWeight: 300,
+    letterSpacing: ["-0.01562em", "-1.5px"],
+  },
+  h2: {
+    fontSize: ["3.75rem", "60px"],
+    lineHeight: 1.2,
+    fontWeight: 400,
+    letterSpacing: ["-0.00833em", "-0.5px"],
+  },
+  h3: {
+    fontSize: ["3rem", "48px"],
+    lineHeight: 1.167,
+    fontWeight: 400,
+    letterSpacing: 0,
+  },
+  h4: {
+    fontSize: ["2.125rem", "34px"],
+    lineHeight: 1.235,
+    fontWeight: 500,
+    letterSpacing: ["0.00735em", "0.25px"],
+  },
+  h5: {
+    fontSize: ["1.5rem", "24px"],
+    lineHeight: 1.334,
+    fontWeight: 500,
+    letterSpacing: 0,
+  },
+  h6: {
+    fontSize: ["1.25rem", "20px"],
+    lineHeight: 1.6,
+    fontWeight: 500,
+    letterSpacing: ["0.0075em", "0.15px"],
+  },
+  subtitle1: {
+    fontSize: ["1rem", "16px"],
+    lineHeight: 1.75,
+    fontWeight: 500,
+    letterSpacing: ["0.00938em", "0.15px"],
+  },
+  button1: {
+    fontSize: ["1rem", "16px"],
+    lineHeight: 1.75,
+    fontWeight: 500,
+    letterSpacing: ["0.00938em", "0.15px"],
+  },
+  subtitle2: {
+    fontSize: ["0.875rem", "14px"],
+    lineHeight: 1.57,
+    fontWeight: 500,
+    letterSpacing: ["0.00714em", "0.1px"],
+  },
+  button2: {
+    fontSize: ["0.875rem", "14px"],
+    lineHeight: 1.57,
+    fontWeight: 500,
+    letterSpacing: ["0.00714em", "0.1px"],
+  },
+  body1: {
+    fontSize: ["1rem", "16px"],
+    lineHeight: 1.5,
+    fontWeight: 400,
+    letterSpacing: ["0.00938em", "0.15px"],
+  },
+  body2: {
+    fontSize: ["0.875rem", "14px"],
+    lineHeight: 1.43,
+    fontWeight: 400,
+    letterSpacing: ["0.01071em", "0.15px"],
+  },
+  caption: {
+    fontSize: ["0.75rem", "12px"],
+    lineHeight: 1.66,
+    fontWeight: 400,
+    letterSpacing: ["0.033333", "0.4px"],
+  },
+};
+
 export const lightTheme = extendTheme({
   colors: {
     neutral: {
@@ -80,6 +161,7 @@ export const lightTheme = extendTheme({
     },
     ...COMMON_PALETTE,
   },
+  ...textStyles,
 });
 
 export const darkTheme = extendTheme({
@@ -99,4 +181,5 @@ export const darkTheme = extendTheme({
     },
     ...COMMON_PALETTE,
   },
+  ...textStyles,
 });
