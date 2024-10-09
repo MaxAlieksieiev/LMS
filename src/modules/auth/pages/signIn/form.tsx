@@ -1,4 +1,5 @@
 import {
+  Button,
   FormControl,
   FormErrorMessage,
   FormLabel,
@@ -12,6 +13,9 @@ export const SignInForm = () => {
         <FormLabel htmlFor="email">Email</FormLabel>
         <Input id="email" placeholder="email" />
         <FormErrorMessage></FormErrorMessage>
+        <Button size="large" variant="primary">
+          Log in
+        </Button>
       </FormControl>
     </form>
   );

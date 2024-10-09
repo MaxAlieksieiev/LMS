@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/lato";
+import { Button } from "./components";
 
 const COMMON_PALETTE = {
   primary: {
@@ -155,6 +156,9 @@ const TEXT_STYLES = {
 };
 
 export const lightTheme = extendTheme({
+  components: {
+    Button,
+  },
   colors: {
     neutral: {
       0: "#222630",
