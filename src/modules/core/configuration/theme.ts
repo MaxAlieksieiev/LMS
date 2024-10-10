@@ -14,6 +14,8 @@ const COMMON_PALETTE = {
     700: "#1C34A3",
     800: "#122383",
     900: "#0A176C",
+    "opacity-500-10": "#395FE31A",
+    "opacity-500-20": "#395FE333",
   },
   success: {
     50: "#F4FDEC",

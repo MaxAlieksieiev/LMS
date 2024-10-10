@@ -19,15 +19,31 @@ const Button = defineStyleConfig({
   variants: {
     "primary-contained": {
       color: "white",
-      background: "primary.500",
+      backgroundColor: "primary.500",
+      _disabled: {
+        backgroundColor: "primary.opacity-500-20",
+        cursor: "not-allowed",
+        _hover: {
+          backgroundColor: "primary.opacity-500-20",
+        },
+      },
+      _hover: {
+        backgroundColor: "primary.400",
+      },
     },
     "primary-outlined": {
       borderColor: "primary.500",
       borderWidth: "1px",
       color: "primary.500",
+      _hover: {
+        backgroundColor: "primary.opacity-500-10",
+      },
     },
     "primary-text": {
       color: "primary.500",
+      _hover: {
+        backgroundColor: "primary.opacity-500-10",
+      },
     },
     "secondary-contained": {
       color: "primary.500",

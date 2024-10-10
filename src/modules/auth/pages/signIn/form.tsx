@@ -13,7 +13,7 @@ export const SignInForm = () => {
         <FormLabel htmlFor="email">Email</FormLabel>
         <Input id="email" placeholder="email" />
         <FormErrorMessage></FormErrorMessage>
-        <Button size="large" variant="error-outlined">
+        <Button size="large" variant="primary-contained" disabled>
           Log in
         </Button>
       </FormControl>
