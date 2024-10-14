@@ -22,13 +22,15 @@ const Button = defineStyleConfig({
       backgroundColor: "primary.500",
       _disabled: {
         backgroundColor: "primary.opacity-500-20",
-        cursor: "not-allowed",
         _hover: {
           backgroundColor: "primary.opacity-500-20",
         },
       },
       _hover: {
         backgroundColor: "primary.400",
+        _disabled: {
+          backgroundColor: "primary.opacity-500-20",
+        },
       },
     },
     "primary-outlined": {
