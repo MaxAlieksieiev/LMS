@@ -22,9 +22,6 @@ const Button = defineStyleConfig({
       backgroundColor: "primary.500",
       _disabled: {
         backgroundColor: "primary.opacity-500-20",
-        _hover: {
-          backgroundColor: "primary.opacity-500-20",
-        },
       },
       _hover: {
         backgroundColor: "primary.400",
@@ -37,14 +34,26 @@ const Button = defineStyleConfig({
       borderColor: "primary.500",
       borderWidth: "1px",
       color: "primary.500",
+      _disabled: {
+        backgroundColor: "primary.opacity-500-20",
+      },
       _hover: {
         backgroundColor: "primary.opacity-500-10",
+        _disabled: {
+          backgroundColor: "primary.opacity-500-20",
+        },
       },
     },
     "primary-text": {
       color: "primary.500",
+      _disabled: {
+        backgroundColor: "primary.opacity-500-20",
+      },
       _hover: {
         backgroundColor: "primary.opacity-500-10",
+        _disabled: {
+          backgroundColor: "primary.opacity-500-20",
+        },
       },
     },
     "secondary-contained": {
