@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/lato";
-import { Button } from "./components";
+import { Button, inputTheme } from "./components";
 
 const COMMON_PALETTE = {
   primary: {
@@ -160,28 +160,8 @@ const TEXT_STYLES = {
 export const lightTheme = extendTheme({
   components: {
     Button,
+    Input: inputTheme,
   },
-  colors: {
-    neutral: {
-      0: "#222630",
-      50: "#2A303C",
-      100: "#414651",
-      200: "#5A5E68",
-      300: "#71747D",
-      400: "#898C93",
-      500: "#A0A3A8",
-      600: "#B7B9BD",
-      700: "#D0D1D4",
-      800: "#E7E7E9",
-      900: "#FFFFFF",
-    },
-    ...COMMON_PALETTE,
-  },
-  ...FONT_CONFIGURATION,
-  ...TEXT_STYLES,
-});
-
-export const darkTheme = extendTheme({
   colors: {
     neutral: {
       0: "#FFFFFF",
@@ -195,6 +175,27 @@ export const darkTheme = extendTheme({
       700: "#394150",
       800: "#212936",
       900: "#121826",
+    },
+    ...COMMON_PALETTE,
+  },
+  ...FONT_CONFIGURATION,
+  ...TEXT_STYLES,
+});
+
+export const darkTheme = extendTheme({
+  colors: {
+    neutral: {
+      0: "#222630",
+      50: "#2A303C",
+      100: "#414651",
+      200: "#5A5E68",
+      300: "#71747D",
+      400: "#898C93",
+      500: "#A0A3A8",
+      600: "#B7B9BD",
+      700: "#D0D1D4",
+      800: "#E7E7E9",
+      900: "#FFFFFF",
     },
     ...COMMON_PALETTE,
   },

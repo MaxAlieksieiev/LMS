@@ -1,4 +1,8 @@
-import { defineStyleConfig } from "@chakra-ui/react";
+import {
+  defineStyleConfig,
+  createMultiStyleConfigHelpers,
+} from "@chakra-ui/react";
+import { inputAnatomy } from "@chakra-ui/anatomy";
 
 const Button = defineStyleConfig({
   baseStyle: {
@@ -83,4 +87,39 @@ const Button = defineStyleConfig({
   },
 });
 
-export { Button };
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(inputAnatomy.keys);
+
+const baseStyle = definePartsStyle({
+  field: {
+    color: "neutral.900",
+    width: "100%",
+    height: "44px",
+    padding: "12px 16px",
+    _placeholder: {
+      color: "neutral.400",
+    },
+    _focusVisible: {
+      borderColor: "primary.500",
+      boxShadow: "none",
+    },
+    _hover: {
+      _disabled: {
+        color: "neutral.300",
+      },
+    },
+    _disabled: {
+      color: "neutral.300",
+    },
+  },
+  element: {
+    color: "neutral.500",
+  },
+  addon: {
+    color: "neutral.500",
+  },
+});
+
+const inputTheme = defineMultiStyleConfig({ baseStyle });
+
+export { Button, inputTheme };
