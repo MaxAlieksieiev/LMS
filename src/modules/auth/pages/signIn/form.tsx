@@ -1,22 +1,23 @@
-import {
-  Button,
-  FormControl,
-  FormErrorMessage,
-  FormLabel,
-  Input,
-} from "@chakra-ui/react";
+import { Button, FormControl, FormLabel, Input, Flex } from "@chakra-ui/react";
 
 export const SignInForm = () => {
   return (
-    <form>
+    <Flex width="100%" direction="column" gap="16px">
       <FormControl>
-        <FormLabel htmlFor="email">Email</FormLabel>
+        <FormLabel htmlFor="email" textStyle="caption">
+          Email
+        </FormLabel>
         <Input id="email" placeholder="email" />
-        <FormErrorMessage></FormErrorMessage>
-        <Button size="large" variant="primary-text" disabled>
-          Log in
-        </Button>
       </FormControl>
-    </form>
+      <FormControl>
+        <FormLabel htmlFor="password" textStyle="caption">
+          Password
+        </FormLabel>
+        <Input id="password" placeholder="*******" type="password" />
+      </FormControl>
+      <Button size="large" variant="primary-contained" mt="8px">
+        Log in
+      </Button>
+    </Flex>
   );
 };

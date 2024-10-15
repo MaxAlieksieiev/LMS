@@ -11,10 +11,25 @@ export const AuthLayout = () => {
       height="100vh"
       direction="column"
     >
-      <Logo />
-      <Text textStyle="h4">Log in</Text>
-      <Text>Welcome to LMS</Text>
-      <Outlet />
+      <Flex
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        maxWidth="557px"
+        width="100%"
+        gap="60px"
+      >
+        <Flex direction="column" justifyContent="center" alignItems="center">
+          <Logo />
+          <Text textStyle="h4" color="neutral.900">
+            Log in
+          </Text>
+          <Text color="neutral.500" textStyle="body1">
+            Welcome to LMS
+          </Text>
+        </Flex>
+        <Outlet />
+      </Flex>
     </Flex>
   );
 };
