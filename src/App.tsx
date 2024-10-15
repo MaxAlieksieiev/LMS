@@ -1,4 +1,8 @@
-import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import { AuthRoutingModule } from "./modules/auth/routing";
 import { AuthLayout } from "./modules/auth/layout";
 import { Dashboard } from "./modules/dashboard/pages/dashboard";
@@ -9,12 +13,11 @@ import { lightTheme } from "./modules/core/configuration/theme";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <Outlet />
-      </div>
-    ),
     children: [
+      {
+        element: <Navigate to="/dashboard" />,
+        index: true,
+      },
       {
         path: "auth",
         element: <AuthLayout />,
@@ -34,7 +37,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  console.log("light", lightTheme);
   return (
     <ChakraProvider theme={lightTheme}>
       <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
