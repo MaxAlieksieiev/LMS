@@ -15,8 +15,6 @@ export const AuthLayout = () => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        maxWidth="557px"
-        width="100%"
         gap="60px"
       >
         <Flex direction="column" justifyContent="center" alignItems="center">
