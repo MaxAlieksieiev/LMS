@@ -18,7 +18,7 @@ export const SignInForm = () => {
         <Input id="password" placeholder="*******" type="password" />
       </FormControl>
       <Button size="large" variant="primary-contained" mt="8px">
-        Log in
+        {t("button.login")}
       </Button>
     </Flex>
   );
