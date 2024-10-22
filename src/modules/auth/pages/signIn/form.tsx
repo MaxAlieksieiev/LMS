@@ -26,7 +26,6 @@ export const SignInForm = () => {
   const onSubmit = () => {
     console.log("values", getValues("email"));
   };
-  console.log("erros", errors?.email?.message);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

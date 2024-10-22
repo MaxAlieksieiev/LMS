@@ -1,4 +1,4 @@
-import * as yup from "yup";
+import Yup from "../../../core/configuration/validation";
 
 type LoginForm = {
   email: string;
@@ -10,9 +10,11 @@ export const initialValues: LoginForm = {
   password: "",
 };
 
-export const validationSchema = yup.object({
-  email: yup.string().required("This field is required."),
-  password: yup.string().required("This field is required.").min(4).max(20),
+export const validationSchema = Yup.object({
+  email: Yup.string()
+    .required("This field is required.")
+    .isValidEmail("Email isn't correct."),
+  password: Yup.string().required("This field is required.").min(4).max(20),
 });
 
-export type Values = yup.InferType<typeof validationSchema>;
+export type Values = Yup.InferType<typeof validationSchema>;
