@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", ".d.ts", "yup.d.ts"]
+  "include": ["src", ".d.ts", "yup.d.ts", "tests/page.e2e.spec.ts"]
 }
