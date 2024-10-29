@@ -1,8 +1,14 @@
-import { Flex, Text } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Logo from "../../../assets/logo.svg";
 
 export const AuthLayout = () => {
+  const { t } = useTranslation("auth");
+  const navigate = useNavigate();
+
+  const onGoToSignUp = () => navigate("/auth/sign-up");
+
   return (
     <Flex
       align="center"
@@ -27,6 +33,18 @@ export const AuthLayout = () => {
           </Text>
         </Flex>
         <Outlet />
+        <Box
+          display="flex"
+          width="100%"
+          alignItems="center"
+          justifyContent="center"
+          gap="10px"
+        >
+          <Text textStyle="body1">{t("account.not.exist")}</Text>
+          <Button width="fit-content" variant="link" onClick={onGoToSignUp}>
+            {t("sign.up")}
+          </Button>
+        </Box>
       </Flex>
     </Flex>
   );
