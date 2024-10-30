@@ -56,6 +56,9 @@ export const SignInForm = () => {
           {errors?.password && (
             <FormErrorMessage>{errors?.password.message}</FormErrorMessage>
           )}
+          <Button style={{ justifyContent: "end" }} variant="link">
+            {t("forgot.password")}
+          </Button>
         </FormControl>
         <Button
           size="large"
